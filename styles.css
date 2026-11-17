@@ -31,3 +31,42 @@ article a {overflow-wrap:anywhere}
   .roadmap li:not(:last-child)::before {left:1.45rem;top:2rem;right:auto;width:2px;height:calc(100% - 1rem)}
   .milestone {position:absolute;top:0;left:0}
 }
+
+.nav {align-items:center}
+.nav .button {background:var(--gold);color:var(--ink);padding:.5rem .85rem}
+.nav .button:hover {background:#ffe48c}
+.archive-filters {display:flex;flex-wrap:wrap;gap:.75rem 1rem}
+.archive-filters[hidden] {display:none}
+.archive-filters label {flex:1 1 12rem;max-width:18rem;margin:0}
+.story {padding:0;border:0;background:transparent}
+.story .section {max-width:68ch;margin:auto}
+.story h1 {font-size:clamp(2rem,6vw,4.5rem);overflow-wrap:anywhere}
+.gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1rem}
+.photo-placeholder {display:grid;place-items:center;aspect-ratio:4/3;background:#e7eff6;border:1px dashed #8698aa;border-radius:1rem}
+@media(max-width:760px) {
+  .nav {gap:.45rem 1rem}
+  .nav a {padding-block:.35rem}
+}
+
+/* Bewerbungsfristen */
+.admissions-table-wrap {overflow-x:auto;border:1px solid var(--line);border-radius:.85rem;margin-top:1.5rem}
+.admissions-table-wrap:focus-visible {outline:3px solid #b07100;outline-offset:4px}
+.admissions-table {width:100%;border-collapse:collapse;text-align:left;min-width:36rem}
+.admissions-table caption {text-align:left;padding:1rem 1.2rem;font-weight:700;background:var(--paper)}
+.admissions-table th,.admissions-table td {padding:1rem 1.2rem;vertical-align:top;border-bottom:1px solid var(--line)}
+.admissions-table thead {background:var(--ink);color:white}
+.admissions-table tbody tr:first-child {background:#fff8e3}
+.admissions-table tbody tr:last-child th,.admissions-table tbody tr:last-child td {border-bottom:0}
+.admissions-note {font-size:.9rem}
+
+.admissions-table .button {white-space:nowrap}
+.admissions-table .button:disabled {background:#e2e5e8;color:#626b73;opacity:1;cursor:not-allowed}
+
+/* Kindergarten-Aufruf im Startseiten-Hero */
+.kindergarten-cta {display:flex;align-items:flex-start;gap:1rem;margin-top:1.8rem;padding:1.25rem;background:#fff;border:1px solid #e4d49f;border-top:4px solid var(--gold);border-radius:1rem;box-shadow:0 6px 20px #102d4c08}
+.kindergarten-icon {display:grid;place-items:center;flex:0 0 3.5rem;width:3.5rem;height:3.5rem;background:#fff4ce;color:var(--ink);border-radius:50%}
+.kindergarten-cta .eyebrow {margin:0 0 .5rem;font-size:.7rem;letter-spacing:.09em}
+.kindergarten-cta h2 {font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.15;letter-spacing:-.02em;margin:0}
+.kindergarten-cta p:not(.eyebrow) {font-size:.95rem;margin:.65rem 0 0}
+.kindergarten-cta .actions {margin-top:1rem;gap:.75rem;font-size:.9rem}
+@media(max-width:480px){.kindergarten-cta{flex-direction:column}.kindergarten-cta .button{width:100%;text-align:center}}

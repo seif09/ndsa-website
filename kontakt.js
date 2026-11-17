@@ -3,12 +3,13 @@ const topic = form.elements.topic;
 const admissionFields = document.querySelector('#admission-fields');
 const feedback = document.querySelector('#feedback');
 
-if (new URLSearchParams(window.location.search).get('thema') === 'aufnahme') {
-  topic.value = 'aufnahme';
+const requestedTopic = new URLSearchParams(window.location.search).get('thema');
+if (['anmeldung', 'aufnahme'].includes(requestedTopic)) {
+  topic.value = 'anmeldung';
 }
 
 function updateAdmissionFields() {
-  const isAdmission = topic.value === 'aufnahme';
+  const isAdmission = topic.value === 'anmeldung';
   admissionFields.hidden = !isAdmission;
   for (const input of admissionFields.querySelectorAll('input')) input.disabled = !isAdmission;
 }
